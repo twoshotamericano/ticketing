@@ -22,6 +22,7 @@ router.post(
   requestValidator,
   async (req: Request, res: Response) => {
     const { email, password } = req.body;
+    console.log('hello!');
 
     const match = await User.findOne({ email });
 
