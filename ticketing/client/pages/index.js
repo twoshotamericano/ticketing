@@ -1,6 +1,6 @@
 const LandingPage = ({ currentUser, tickets }) => {
   console.log(`currentUser is ${currentUser}`);
-  console.log('starting up!');
+  console.log('starting up 2!');
   const ticketList = tickets?.map((ticket) => {
     return (
       <tr key={ticket.id}>
