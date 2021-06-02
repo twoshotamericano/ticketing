@@ -5,14 +5,14 @@ on:
     branches:
       - master
     paths:
-      - "ticketing/auth/**"
+      - 'ticketing/auth/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cd ticketing/auth && docker build -t eanderson/auth ./Dockerfile.development
+      - run: cd ticketing/auth && docker build -t eanderson/auth -f ./Dockerfile.development .
       - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         env:
           DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
